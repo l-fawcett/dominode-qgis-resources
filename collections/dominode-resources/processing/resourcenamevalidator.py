@@ -156,7 +156,7 @@ class DomiNodeResourceNameValidator(QgsProcessingAlgorithm):
                 self.OUTPUT_VERSION: version,
             })
         else:
-            raise QgsProcessingException(f'Invalid Name {resource_name!r}')
+            raise QgsProcessingException(f'Invalid Name {resource_name!r}, each resource should have lower case letters and be separated by 3 or 4 underscores ( _ ), the first one being the department and the last one being the version number, for example department_dataset_1 or department_collection_dataset_4')
         if format_suffix is not None:
             result[self.OUTPUT_DATASET_NAME] = resource_name.replace(
                 format_suffix, '')
