@@ -156,7 +156,7 @@ class DomiNodeResourceNameValidator(QgsProcessingAlgorithm):
                 self.OUTPUT_VERSION: version,
             })
         else:
-            raise QgsProcessingException(f'Invalid name {resource_name!r}')
+            raise QgsProcessingException(f'Invalid Name {resource_name!r}')
         if format_suffix is not None:
             result[self.OUTPUT_DATASET_NAME] = resource_name.replace(
                 format_suffix, '')
